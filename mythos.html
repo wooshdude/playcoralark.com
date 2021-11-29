@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<style>
+    .content {
+        margin: 0 auto;
+        margin-bottom: auto;
+        position:absolute;
+        left:0;
+        right:0;
+        padding-bottom: 50%;
+    }
+
+    .innerContent {
+        text-align: center;
+        display: inline-block;
+        font-size: 25px;
+        font-family: monospace;
+
+        left: 50%;
+        transform: translate(-50%);
+        position: absolute;
+        padding-top: 10px;
+        width: 85%;
+        padding-bottom: 25%;
+    }
+/*
+    .innerContent::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    */
+
+    body{
+        background-color: #333;
+        background-size: 100%;
+        color: azure;
+        font-size: 20px;
+        font-family: monospace;
+    }
+
+    .header {
+        font-family:monospace;
+        padding-top: 2%;
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+
+    hr.one {
+        border: 3px solid rgb(204, 78, 78);
+    }
+
+    hr.two {
+        border: 3px solid rgb(78, 154, 204);
+    }
+
+    hr.three {
+        border: 3px solid rgb(204, 196, 78);
+    }
+
+
+    .parallax {
+        /* The image used */
+        background-image: url("beetel.png");
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        width: 100%;
+        min-height: 500px;
+
+        padding-top: 16%;
+    }
+
+    .topBar {
+        font-family: monospace;
+        position: fixed;
+        background-color: #333;
+        width: 100%;
+        height: auto;
+        top: 0;
+        padding-left: 2%;
+        padding-top: 15px;
+        padding-bottom: 8px;
+    }
+
+
+    /* flip 2 test */
+    .flip-card {
+        background-color: transparent;
+        width: 450px;
+        height: 610px;
+        perspective: 1000px;
+        margin: 2%;
+        min-width: 300px;
+        display: inline-block;
+        z-index: 99;
+    }
+
+    .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        z-index: 99;
+
+    }
+
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+        z-index: 99;
+
+    }
+
+    .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 10px;
+    }
+
+    .flip-card-front {
+      background-color: #bbb;
+      color: black;
+    }
+
+    .flip-card-back {
+        background-color: #ffffff;
+        color: #111;
+        transform: rotateY(180deg);
+        line-height: 24px;
+        overflow: scroll;
+        overflow-x: hidden;
+        background-image: url('cards/marble-card.png');
+        background-size: auto;
+        
+    }
+
+    .lore {
+        text-align: left;
+        margin: 25px;
+        font-size: large;
+    }
+
+    .face {
+        border-radius: 10px;
+    }
+
+    .mobileSpacer {
+        display: none;
+    }
+
+    .desktopSpacer {
+        display: none;
+    }
+
+    
+        /* width */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #333;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    @media only screen and (max-width: 1000px){
+        .flip-card {
+            background-color: transparent;
+            width: 50%;
+            height: 400px;
+            max-width: 350px;
+            perspective: 1000px;
+            margin: auto;
+            padding-bottom: 10%;
+        }
+
+        .innerContent {
+            text-align: center;
+            display: block;
+            font-size: 25px;
+            font-family: monospace;
+
+            left: 50%;
+            transform: translate(-50%);
+            position: absolute;
+            padding-top: 10px;
+            width: 80%;
+            padding-bottom: 25%;
+        }
+
+        .banner {
+            display: none;
+        }
+
+        .spacer {
+            display: none;
+        }
+    }
+    
+</style>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Mythos</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="yourmom logo.png">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C1VCD3SCT7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-C1VCD3SCT7');
+</script>
+    </head>
+    <body>
+
+
+        <div class="spacer" style="margin-bottom: 80px;"></div>
+        <center><img class='banner' src='cards/mythos card banner.png' style="width: 70%;"></center>
+        <div class="content">
+            <center><h1 class='header' style="text-align: center;">THE CORALARK MYTHOS</h1></center>
+            <center><h2 style="text-align: center;">STORIES OF THE WORLD</h1></center>
+            <hr class='one' style="margin-right: 18%; margin-left: 18%;">
+            <br>
+            <div class='innerContent' >
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img class='face' src="cards/one minute card.png" alt="Avatar" style="width:100%; height:100%;">
+                        </div>
+                        <div class="flip-card-back">
+                            <div class='lore'>
+                                <h2 style="padding-top: 30px; padding-bottom: 15px;">One Minute</h2> 
+                                <p>Block, after block, after block, after block breaks. The sounds of each are beginning to blend together. Just keep digging they said, it can&rsquo;t be that long they said. Slimes were nowhere in sight, and chances were that an hour from now there would be none.</p>
+                                <p>Ferris began to hear his own heartbeat in sync with the stone he was destroying. Just then, his pickaxe broke, but in a matter of seconds another had taken its place and the cycle continued. He broke block, after block, after block. Ferris could hear his breathing move in sync with the stone he was destroying. His pickaxe broke. Another took its place. He broke block, after block. Ferris could hear the sounds of his footsteps reverberate in sync with the stone he was destroying. His pickaxe broke. Another took its place. He broke a block, and the new pickaxe broke. It must have been damaged already.</p>
+                                <p>Ferris reached all over, but there were no more pickaxes left. He began the walk back. For ten seconds, all that could be heard were his heartbeat, his breath, and his footsteps. Another ten seconds, were the sounds of louder, faster footsteps. Another ten seconds, were the screams of a horrified miner. Another ten seconds, were the screams of a horrified miner and something much louder. After another ten seconds, the sound of the miner falling to the ground sealed his fate. Before the final ten seconds of his journey could be completed, Ferris was gone, leaving a faint trail of red down the tunnel.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img class='face' src="cards/jordan card.png" alt="Avatar" style="width:100%; height:100%;">
+                        </div>
+                        <div class="flip-card-back">
+                            <div class='lore'>
+                                <h2 style="padding-top: 30px; padding-bottom: 15px;">Faith</h2> 
+                                <p>&ldquo;Welcome child.&rdquo;</p>
+                                <p>The skeptic walked into the holy place, it seemed more like a residence than a church. &ldquo;Who&rsquo;re you?&rdquo;</p>
+                                <p>The speaker seemed offended, &ldquo;Why, I am the speaker, I speak for the Jordan.&rdquo;</p>
+                                <p>&ldquo;Yeah, and how does that work?&rdquo; The skeptic analyzed the building&rsquo;s interior. It was clear that it was built by no god, but a man, regardless of what the common citizens would believe.</p>
+                                <p>&ldquo;I have a connection with it, ever since I&hellip;&rdquo;</p>
+                                <p>&ldquo;Since you built it?,&rdquo; the skeptic interrupted.</p>
+                                <p>&ldquo;I- I have no idea what you are talking about. The Jordan was placed here by a higher power to guide us all.&rdquo;</p>
+                                <p>&ldquo;Well, your followers may eat that up, but anyone with half a brain can tell it&rsquo;s a ruse,&rdquo; the skeptic leaned against a wall.</p>
+                                <p>The speaker grew increasingly nervous as the skeptic spoke, &ldquo;So you mean to try and defame me? Ruin the one thing that brings meaning to so many lives?&rdquo;</p>
+                                <p>&ldquo;No, I&rsquo;m here to tell you that a very powerful man has taken interest in your control over Section 8&rsquo;s culture. He wants you to continue &lsquo;educating&rsquo; the public, but now with his orders guiding you.&rdquo;</p>
+                                <p>&ldquo;I have no interest in a partnership of any kind, so you can tell your boss to drop it.</p>
+                                <p>The skeptic chuckled to himself, &ldquo;This would be no partnership, he would become your new boss.&rdquo;</p>
+                                <p>&ldquo;Is that supposed to convince me to change my mind?&rdquo;</p>
+                                <p>&ldquo;No, I just like the details to be accurate,&rdquo; he paused for a moment. &ldquo;Listen, I strongly encourage you to take this deal.&rdquo;</p>
+                                <p>&ldquo;Are you threatening me with something if I refuse?&rdquo;</p>
+                                <p>The skeptic stood up and pulled back his jacket, revealing a crossbow with a single firework loaded, &ldquo;I&rsquo;m afraid I&rsquo;ve been instructed to.&rdquo; The speaker was shocked at the skeptic&rsquo;s actions, but he had worked too hard to get where he was to give it up now. &ldquo;People like you and your boss think they can take everything by force, you think you&rsquo;re so much tougher than all of us,&rdquo; the speaker pulled a diamond sword from his waist, &ldquo;but we have fight in us, and we won&rsquo;t back down.&rdquo; Now the speaker was smiling, he held out his sword waiting for the skeptic.</p>
+                                <p>&ldquo;It was your choice,&rdquo; the skeptic reached for his crossbow. Many people in the area could confirm that they heard a loud boom that day. A short hour later, a cleaning crew followed by a construction crew entered the Jordan. Most assumed that it was getting renovated.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img class='face' src="cards/sewer card.png" alt="Avatar" style="width:100%; height:100%;">
+                        </div>
+                        <div class="flip-card-back">
+                            <div class='lore'>
+                                <h2 style="padding-top: 30px; padding-bottom: 15px;">A Brewing Secret</h2>
+                                    <p>You can never trust someone. Not completely, anyway. There&rsquo;s always something lurking beyond their words, a trove of secrets sworn never to be unearthed. Whether these secrets are kept for money, power, or for the sake of knowledge, none but the bearer can tell. However, when we take a step back and look at the story as a whole, these secrets become a lot less&hellip; well, secret.&nbsp;</p>
+                                    <p>&ldquo;Are you sure he won&rsquo;t find out?&rdquo; A voice questioned.</p>
+                                    <p>&ldquo;Of course not. Trust me, I made sure to cover our tracks&rdquo; A second voice responded.</p>
+                                    <p>&ldquo;I&rsquo;m still not set on whether or not building this under the mayor&rsquo;s nose was a good idea.&rdquo; The pair were                                       hunched over. A faint sloshing noise could be heard as they crept along. The lights illuminating what can only be described as a tunnel                                    were too dim to make out anything besides blotchy silhouettes. &ldquo;I mean, if he hears anything suspicious he could send the police to                                  investigate.&rdquo;</p>
+                                    <p>&ldquo;Need I remind you I&rsquo;m on the force too?&rdquo; The second voice retorted. He places his hand on the wall of the tunnel                                     and reveals a secret door. The group crawls inside. A lamp turns on and illuminates the room. The second voice is the first to enter. He                                       wore a long red robe and a black beret that covered his aquamarine hair. &ldquo;Look, if you&rsquo;re that worried about getting into a                                    scuffle with the law, brew an invisibility potion or something. That&rsquo;s why we built this thing in the first place.&rdquo;&nbsp;</p>
+                                    <p>The first voice responds as he too enters the stone brick room. &ldquo;Sure, I could get myself outta here, but I&rsquo;m worried                                       about all this stuff.&rdquo;&nbsp;</p>
+                                    <p>The room was littered with empty bottles and other brewing materials, as well as 6 strange machines built into the wall. The duo                                        proceeded to get to work, placing materials into the machines, which produced strange runes. As more and more components were added, the                                       runes began to glow in a way that can only be described as &lsquo;sinister&rsquo;.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img class='face' src="cards/mall card.png" alt="Avatar" style="width:100%; height:100%;">
+                        </div>
+                        <div class="flip-card-back">
+                            <div class='lore'>
+                                <h2 style="padding-top: 30px; padding-bottom: 15px;">Perspective</h2> 
+                                <p>Fear filled Archibald&rsquo;s mind when the Mall began construction. Now demand for workers would be higher than ever. He was the only male in his unit. He had watched the handler take every last one of his children to work in the halls. Each and every time, there was nothing he could do, for the handler could overpower any one of them in an instant.</p>
+                                <p>In June, news came in that a general store, Ikea, would be built in the mall. The handler visited Archibald&rsquo;s unit and took with him all the children that had been born since he had last visited. Archibald&rsquo;s rage grew, but he knew that there was little he could do. On his way out, the handler&rsquo;s pants caught on an edge and caused him to drop a piece of iron. He did not seem to notice, but Archibald did. The item was quickly hidden under his bed.</p>
+                                <p>In July, news came in that a bookstore, Bens &amp; Noble, would be built in the mall. Once again, the handler visited Archibald&rsquo;s unit and took all of the new born children with him. Archibald&rsquo;s rage grew even more, but he knew there was little he could do. On his way out, the handler left a furnace because several people had died of hypothermia, hurting his quotas. The handler did not realize the opportunity he had just given them, but Archibald did. He made sure to thank the handler greatly for the gift.</p>
+                                <p>In August, news came in that several workers at the mall had died, and their positions would need to be replaced. Once again, the handler visited Archibald&rsquo;s unit and began to take the newborns. Archibald could stand by no longer, he rushed towards the handler to try and stop him; but just as he predicted, the handler overpowered him. That day, he was beaten almost to death by a wooden baton that the handler was carrying. When he was done, there was little of the baton left, so the handler tossed it into the nearby crops and left. The other people tended to Archibald&rsquo;s wounds and tried to comfort him. But he was the most comfortable he had been in a long time, for his plan was ready.</p>
+                                <p>In July, the handler returned to replace Archibald. After their altercation, he figured it would be safest to dispose of him. But upon entering his unit, Archibald was nowhere in sight. The handler was confused, he was met with a room full of women and children staring at him, seemingly in anticipation. Out of the corner of his eye, he spotted movement. As the handler began to turn to face his attacker, his head was cut clean from his body. Archibald led his unit outside and towards freedom.&nbsp;</p>        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img class='face' src="cards/attic card.png" alt="Avatar" style="width:100%; height:100%;">
+                        </div>
+                        <div class="flip-card-back">
+                            <div class='lore'>
+                                <h2 style="padding-top: 30px; padding-bottom: 15px;">The Attic</h2> 
+                                <p>Ivan returned from a long day out in the cold. He had spent the whole day chopping down and replanting oak trees to continue building his house. Oak trees did not grow locally to him, so keeping up their population all by himself was tiresome.</p>
+                                <p>After resting by his first-floor fireplace, Ivan prepared himself a meal. He was eating cooked rabbit tonight, one of his personal favorites. After deciding where to sit at his grand dining table, he dug in. As he enjoyed every single bite, Ivan thought he might have heard something. It seemed to be coming from upstairs. He set down his meal and went to investigate.</p>
+                                <p>He walked up the staircase, past the second-floor fireplace, past his four separate beds, and to the ladder that led straight up into the attic. Ivan swore he could hear shuffling up there. It was nothing too loud, so he assumed a small animal had gotten trapped. He ascended into the attic to save the animal.</p>
+                                <p>Upon closing the trapdoor, Ivan locked eyes with the creature. It was a rabbit, but something was off about it. Its fur was the whitest Ivan had ever seen. And its eyes were unusually red. He figured he would need to capture it to relocate it out of the house, so Ivan began to rummage through his chests to find the right tools.</p>
+                                <p>He had turned his back on the creature. And a creature it was for moments after he turned, its teeth were sinking into his back. Ivan let out a scream and knocked the rabbit away. He opened the trapdoor and descended down as fast as possible. It took several moments for him to catch his breath. This was just enough time for Ivan to realize that he had not locked the trapdoor and for the rabbit to find its way out. He spun around to see the beast charging at him. Ivan took one good swing of his fists, and hit it into the corner of the room.</p>
+                                <p>Earlier that week, Ivan had accidentally hammered a hole in his wall upon trying to hang a painting. Unfortunately for him, this hole was in the very corner the rabbit now was. With one swift leap, the rabbit went through the hole and into the darkness inside.</p>
+                                <p>Ivan stayed up all night guarding the hole, knowing that if he fell asleep the beast would seize the opportunity and kill him. But it never came back out. He knew that with something that dangerous within his walls, this house could not serve him any longer. The next day, Ivan left in search of new land to the East, abandoning his home. Some say that if you go to the house today, you can still hear the scuttling of a rabbit's feet as it moves through the house&rsquo;s crevices, waiting for the right opportunity.</p>                      
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img class='face' src="cards/arena card.png" alt="Avatar" style="width:100%; height:100%;">
+                        </div>
+                        <div class="flip-card-back">
+                            <div class='lore'>
+                                <h2 style="padding-top: 30px; padding-bottom: 15px;">Guilty</h2> 
+                                <p>&ldquo;The Section 8 Court finds you guilty of all charges.&rdquo;</p>
+                                <p>The floor beneath Harv&rsquo;s feet opened up, swallowing him whole. His fall was broken by a small pit of water. He climbed out and dried off. Ahead of him, a set of stairs leading even further underground. There was nowhere else he could go, so he descended.</p>
+                                <p>As he went deeper and deeper underground, he could hear the roaring of a crowd. It grew louder, and louder, and louder. He finally stepped onto even ground and was immediately swarmed by guards. In a matter of seconds, they had outfitted him in iron armor and had placed an axe in his hands. Before he could ask any questions, they exited and locked the way out.</p>
+                                <p>&ldquo;The moment you all have been waiting for has finally arrived!&rdquo; the announcer&rsquo;s voice boomed. Eren perked up in her seat. She had been waiting all day to watch this fight. Her past few paychecks had gone into getting her into this establishment, The Pit. The food and drinks were something to die for, but the fights were the stuff of legend. Eren had never watched one herself, but she had heard of their grand nature from close friends.</p>
+                                <p>She looked through the glass floor in the center of the room to see a man nervously walking forward to the center of the room, axe in hand. Suddenly, the mechanical whir of the elevator filled the room with anticipation.</p>
+                                <p>Darkness and noise, darkness and noise. That was all it had ever felt, until now. There was something in front of it that made its natural instincts kick in. It needed to catch it, it needed to kill it. Heavy step after heavy step, it chased the thing around in circles. Until finally, it caught it. Its hands raised up to the sky and the thing was gone.</p>
+                                <p>&ldquo;The Rancor is victorious!&rdquo;</p>
+                                <p>Louder noises, louder noises, that was all it could hear now. It is being pushed back now, onto its original position. Back into the darkness it plunges. Now it is only darkness.</p>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img class='face' src="cards/splinter card.png" alt="Avatar" style="width:100%; height:100%;">
+                        </div>
+                        <div class="flip-card-back">
+                            <div class='lore'>
+                                <h2 style="padding-top: 30px; padding-bottom: 15px;">The Splinter</h2> 
+                                <p>JD walks up to Pringle, who is admiring a glowing wooden sword he had mounted on the wall.</p>
+<p>&ldquo;Why do you have this?&rdquo; JD asks, sounding tired.</p>
+<p>&ldquo;I stole it from Riverpong.&rdquo;</p>
+<p>&ldquo;And why did you do that? It&rsquo;s completely worthless.&rdquo;</p>
+<p>&ldquo;I don&rsquo;t believe that. There&rsquo;s something about it I just can&rsquo;t explain.&rdquo;</p>
+<p>&ldquo;Splinters&hellip;&rdquo; JD responds as he walks away.</p>
+<p>Pringle watches him with a blank expression.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img class='face' src="cards/court card.png" alt="Avatar" style="width:100%; height:100%;">
+                        </div>
+                        <div class="flip-card-back">
+                            <div class='lore'>
+                                <h2 style="padding-top: 30px; padding-bottom: 15px;">Trial by Paint</h2> 
+                                <p>&ldquo;You&rsquo;re under arrest!&rdquo; A voice yelled out. Instinctively, Poly leapt into the air and lit a rocket in his hand. Within moments officers Pringle and James were hot on his tail. Shots were traded between the two groups before Pringle managed to catch up and tackle the suspect. Contained in handcuffs, Poly had no choice but to cooperate with his captors. After a search of his inventory conducted in the police station, the man known as the Masked Painter was brought before the court. The eyes of the jury and the audience were locked on the man who had tormented their town for weeks. They&rsquo;re mouths were silent, but their gaze spoke volumes. Poly wasn&rsquo;t fazed. He cared little about how the people felt about his actions. Besides, he had a plan. While the prosecutor of the case stood to give his evidence to the jury, Poly found his chance. At that moment, a creeper wandered into the courtroom. During the ensuing commotion. Poly drew his blade, and attacked the audience. This sudden show of force was indeed terrifying, but it did not save him. His fate was sealed as the floor opened beneath his feet.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+            
+            
+        </div>
+        <script src="" async defer></script>
+    </body>
+</html>

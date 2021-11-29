@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<style>
+    .topbar{
+        display: none;
+    }
+    
+    .banner{
+        display: none;
+    }
+
+
+    .content {
+        margin: 0 auto;
+        margin-bottom: auto;
+        position:absolute;
+        left:0;
+        right:0;
+        padding-bottom: 50%;
+    }
+
+    .innerContent {
+        margin-left: 15%;
+        margin-right: 15%;
+        padding-top: 10px;
+        font-size: medium;
+    }
+
+    body{
+        background-color: #333;
+        background-size: 100%;
+        color: azure;
+        font-size: 20px;
+        font-family: monospace;
+    }
+
+    .blocks{
+        padding-top: 50px;
+    }
+
+    .names{
+        padding-top: 0px;
+    }
+
+    .header {
+        font-family:monospace;
+        padding-top: 2%;
+    }
+
+    hr.one {
+        border: 3px solid rgb(204, 78, 78);
+    }
+
+    hr {
+        border: 3px solid rgb(78, 154, 204);
+    }
+
+    hr.three {
+        border: 3px solid rgb(204, 196, 78);
+    }
+
+    .parallax {
+        /* The image used */
+        background-image: url("mall.png");
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        width: 100%;
+        min-height: 100px;
+        padding-top: 16%;
+    }
+
+    .topBar {
+        font-family: monospace;
+        position: fixed;
+        background-color: #333;
+        width: 100%;
+        height: auto;
+        top: 0;
+        padding-left: 2%;
+        padding-top: 12px;
+        padding-bottom: 8px;
+    }
+    
+    /* width */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    .photo{
+        width: 100%;
+        float: none;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #333;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    @media only screen and (max-height: 500px) {
+        .innerContent {
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+    }
+
+    @media only screen and (min-width: 600px) {
+        .banner{
+            display: none;
+        }   
+
+        .spacer{
+            margin-bottom: 40px;
+        }
+
+        .blocks{
+            padding-bottom: 25%;
+        }
+
+        .photo{
+            width: 40%;
+            float: left;
+        }
+
+        .names{
+            float: left;
+        }
+
+        .innerContent{
+            font-size: small;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+    }
+
+    @media only screen and (min-width: 1000px) {
+        .banner{
+            display: block;
+        }   
+
+        .blocks{
+            padding-bottom: 20%;
+        }
+
+        .photo{
+            width: 30%;
+            float: left;
+        }
+
+        .names{
+            float: left;
+        }
+
+        .innerContent{
+            font-size: large;
+            margin-left: 15%;
+            margin-right: 15%;
+        }
+    }
+
+    @media only screen and (min-width: 1500px){
+        .innerContent{
+            font-size: x-large;
+        }
+    }
+    
+</style>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>News</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="yourmom logo.png">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C1VCD3SCT7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-C1VCD3SCT7');
+</script>
+    </head>
+    <body>
+
+
+        <div class="topBar">
+        </div>
+        <div class="spacer"></div>
+        <center><img class='banner' src='images/mall.png' style="width: 70%;"></center>
+        <div class="content">
+            <br>
+            <br>
+            <div style="margin-left: 20%; padding-left: 3%; margin-right: 20%; background-color: azure;"><h1 class='otherheader' style='color:#333; font-size: 35px; font-family: monospace;'>Latest</h1></div>
+            <div class='innerContent'>
+                <hr>
+
+                
+                <div class='blocks'>
+                    <a href="/articles/11-25-21"><img class='photo' src="images/greenhouse.jpg" style="padding-right: 25px;"></a>
+                    <div class='names' style="text-align: left;">
+                        <h6>THIS WEEK AT CORALARK - 11/25/21</h6>
+                        <h2 style="font-family: Arial, Helvetica, sans-serif;">Making Preparations</h2>
+                    </div>
+                </div>
+                
+
+                <div class='blocks'>
+                    <a href="articles/10-7-21"><img class='photo' src="images/ender boys.png" style="padding-right: 25px;"></a>
+                    <div class='names' style="text-align: left;">
+                        <h6>THIS WEEK AT CORALARK - 10/7/21</h6>
+                        <h2 style="font-family: Arial, Helvetica, sans-serif;">Next Level Travel</h2>
+                    </div>
+                </div>
+
+                <div class='blocks'>
+                    <a href="articles/9-30-21"><img class='photo' src="images/building from floor.png" style="padding-right: 25px;"></a>
+                    <div class='names' style="text-align: left;">
+                        <h6>THIS WEEK AT CORALARK - 9/30/21</h6>
+                        <h2 style="font-family: Arial, Helvetica, sans-serif;">SETTING FOUNDATIONS</h2>
+                    </div>
+                </div>
+
+                <div class='blocks'>
+                    <a href="articles/update1.0.3"><img class='photo' src="images/yourmom hotfix.png" style="padding-right: 25px;"></a>
+                    <div class='names' style="text-align: left;">
+                        <h6>UPDATE 1.0.3</h6>
+                        <h2 style="font-family: Arial, Helvetica, sans-serif;">THE ONE ABOUT MARKERS</h2>
+                    </div>
+                </div>
+
+                <div class='blocks'>
+                    <a href="articles/9-23-21"><img class='photo' src="images/coralark and cards.png" style="padding-right: 25px;"></a>
+                    <div class='names' style="text-align: left;">
+                        <h6>THIS WEEK AT CORALARK - 9/23/21</h6>
+                        <h2 style="font-family: Arial, Helvetica, sans-serif;">BACK AND BETTER THAN EVER</h2>
+                    </div>
+                </div>
+
+                <div class='blocks'>
+                    <a href="articles/8-26-21"><img class='photo' src="images/onlinemap.PNG" style="padding-right: 25px;"></a>
+                    <div class='names' style="text-align: left;">
+                        <h6>THIS WEEK AT YOUR MOM - 8/26/21</h6>
+                        <h2 style="font-family: Arial, Helvetica, sans-serif;">A BRIEF HIATUS</h2>
+                    </div>
+                </div>
+
+
+                <div class='blocks'>
+                    <a href="articles/hotfix-1.0.2"><img class='photo' src="images/yourmom hotfix.png" style="padding-right: 25px;"></a>
+                    <div class='names' style="text-align: left;">
+                        <h6>HOTFIX - 1.0.2</h6>
+                        <h2 style="font-family: Arial, Helvetica, sans-serif;">THE ONE ABOUT ENTITIES</h2>
+                    </div>
+                </div>
+
+                <div class='blocks'>
+                    <a href="articles/8-19-21"><img class='photo' src="images/pathway.png" style="padding-right: 25px;"></a>
+                    <div class='names' style="text-align: left;">
+                        <h6>THIS WEEK AT YOUR MOM - 8/19/21</h6>
+                        <h2 style="font-family: Arial, Helvetica, sans-serif;">A WORK IN PROGRESS</h2>
+                    </div>
+                </div>
+
+                <div class='blocks'>
+                    <a href="articles/8-12-21"><img class='photo' src="images/beetel.png" style="padding-right: 25px;"></a>
+                    <div class='names' style="text-align: left;">
+                        <h6>THIS WEEK AT YOUR MOM - 8/12/21</h6>
+                        <h2 style="font-family: Arial, Helvetica, sans-serif;">BUSY AS BEES</h2>
+                    </div>
+                </div>
+
+                <div class='blocks'>
+                    <a href="articles/8-5-21"><img class='photo' src="images/computer.png" style="padding-right: 25px;"></a>
+                    <div class='names' style="text-align: left;">
+                        <h6>THIS WEEK AT YOUR MOM - 8/5/21</h6>
+                        <h2 style="font-family: Arial, Helvetica, sans-serif;">BINARY RENOVATIONS</h2>
+                    </div>
+                </div>
+
+                <div class='blocks'>
+                    <a href="articles/hotfix 1.0.2"><img class='photo' src="images/yourmom hotfix.png" style="padding-right: 25px;"></a>
+                    <div class='names' style="text-align: left;">
+                        <h6>HOTFIX - 1.0.1</h6>
+                        <h2 style="font-family: Arial, Helvetica, sans-serif;">THE ONE ABOUT PAPERMC</h2>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <script src="" async defer></script>
+    </body>
+</html>

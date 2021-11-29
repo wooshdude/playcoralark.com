@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<style>
+    .content {
+        margin: 0 auto;
+        margin-bottom: auto;
+        background-color: #333;
+        position:absolute;
+        left:0;
+        right:0;
+        padding-bottom: 50%;
+    }
+
+    .innerContent {
+        margin-left: 25%;
+        margin-right: 25%;
+        padding-top: 10px;
+    }
+
+    body{
+        background-color: #333;
+        background-size: 100%;
+        color: azure;
+        font-size: 20px;
+        font-family: monospace;
+    }
+
+    .header {
+        font-family:monospace;
+        padding-top: 2%;
+    }
+
+    hr.one {
+        border: 3px solid rgb(204, 78, 78);
+    }
+
+    hr.two {
+        border: 3px solid rgb(204, 196, 78);
+    }
+
+    hr.three {
+        border: 3px solid rgb(78, 154, 204);
+    }
+
+
+    .parallax {
+        /* The image used */
+        background-image: url("mall.png");
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        width: 100%;
+        min-height: 100px;
+        padding-top: 16%;
+    }
+
+    .topBar {
+        font-family: monospace;
+        position: fixed;
+        background-color: #333;
+        width: 100%;
+        height: auto;
+        top: 0;
+        padding-left: 2%;
+        padding-top: 12px;
+        padding-bottom: 8px;
+    }
+    
+        /* width */
+        ::-webkit-scrollbar {
+      width: 10px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #333;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+    
+</style>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>patch-notes</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <div class="topBar">
+            <div><a href="index.html"><img src="backArrow.png" style="width: 35px;"></a></div>
+        </div>
+        <div class="parallax"></div>
+        <div class="parallax"></div>
+        <div class="spacer"></div>
+        <div class="content">
+            <center><h1 class='header' style="text-align: center;">yourmom.smp News</h1></center>
+            <div class='innerContent'>
+                <hr class="one">
+                <br>
+
+                <h2>Update 1.1.0</h2>
+                <h6>Thursday, August 5, 2021</h6>
+                <p>
+                    This update is quite juicy. A lot of work went into making the server as smooth as possible. This week was all about a huge migration.
+                </p>
+                <h3>A New Office</h3>
+                <ul>
+                    <li>The computer that hosts the server has changed from running a Windows 10 operating system to a Linux-based one, specifically Ubuntu.</li>
+                    <li>Changed the clunky old HDD to a fancy new SSD, which should hopefully keep speed fast and be more consistant than disks.</li>
+                </ul>
+                This is a pretty big deal, considering that the server has never seen anything besides Windows 10. This should also allow for more streamlined updates and hotfixes.
+
+                <h3>New Things Come And Go</h3>
+                <ul>
+                    A new plugin was added that should hopefully attempt to alleviate some lag coming from the multi-gigabyte sized world file that is the server. 
+                    Because of this, Piglin farms may no longer drop XP in a gracefull stream. Rather, XP will be delivered in meaty chunks.
+                    <br>
+                    <br>
+                    Along with this new plugin, we have also opted to remove the "Armored Elytra" datapack, which allowed players to combine their chestplate's resistance and their elytra's 
+                    ability to soar across the skys. Unfortunatly, with the growing number of players, we deemed the data-pack "Not vanilla enough", so it was scrapped. Elytras that have 
+                    previously undergone the combination will still remain the same, but you can no longer create more.
+                    <br>
+                    <br>
+                    However, elytras did receive a little bit of a buff elsewhere. Slaying the dragon now has a 35% chance to drop a shiny pair of wings. This should hopefully incentivise 
+                    dragon slaying and should make finding wings much less of a hassle for newer players.
+                </ul>
+
+                <br>
+                Thanks for continuing to support the server. I'll do my best to keep things updated for you.
+                <br>
+                <br>
+                Glowing Regards,
+                <br>
+                Pringle
+
+                <br>
+                <br>
+                <hr class="two">
+                <br>
+
+                <h2>Hotfix 1.0.2</h2>
+                <h6>Thursday, July 29, 2021</h6>
+                <p>
+                    This hotfix attempted to fix the issue of TPS drop on the server by optomizing the world file with mojangs new build in 
+                    optimization button.
+                </p>
+                <h3>Tweaks</h3>
+                <ul>
+                    <li>Further optimized the PaperMC server launcher.</li>
+                    <li>Optimized the server's overworld file in an attempt to reduce lag.</li>
+                </ul>
+
+                <h3>Potential Bugs</h3>
+                <ul>
+                    <li>There might be issues with player inventories, but a backup of all inventories has been saved so don't worry.</li>
+                </ul>
+                <h3>Website</h3>
+                <ul>
+                    <li>The official website (this one!) received a makeover, turning it into an information hub for the server.</li>
+                </ul>
+
+                <br>
+                <hr class="three">
+                <br>
+
+                <h2>Update 1.0.1</h2>
+                <h6>Wednesday, July 28, 2021</h6>
+                <p>This update saw the move from the old Spigot platform to the new 
+                    cool PaperMC platform. This should increase server speeds and prevent
+                    it from shitting itself.</p>
+                <h3>Changes</h3>
+                <ul>
+                    <li>Migrated from Spigot to PaperMC.</li>
+                    <li>Re-introduced imageOnMap, allowing players to generate custom map art.</li>
+                    <ul>
+                        <li>Splatter maps remain nonfunctional. To be fixed in a later update.</li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+        <script src="" async defer></script>
+    </body>
+</html>

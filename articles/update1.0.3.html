@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<style>
+    .content {
+        margin: 0 auto;
+        margin-bottom: auto;
+        position:absolute;
+        left:0;
+        right:0;
+        padding-bottom: 50%;
+    }
+
+    .innerContent {
+        left: 50%;
+        transform: translate(-50%);
+        position: absolute;
+        padding-top: 10px;
+        max-width: 50%;
+        min-width: 300px;
+        padding-bottom: 25%;
+        overflow-x: hidden;
+        line-height: 30px
+    }
+
+    body{
+        background-color: #333;
+        background-size: 100%;
+        color: azure;
+        font-size: 20px;
+        font-family: monospace;
+    }
+
+    .header {
+        font-family:monospace;
+        padding-top: 2%;
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+
+    hr.one {
+        border: 3px solid rgb(204, 78, 78);
+    }
+
+    hr.two {
+        border: 3px solid rgb(78, 154, 204);
+    }
+
+    hr.three {
+        border: 3px solid rgb(204, 196, 78);
+    }
+
+    .media {
+        width: 50%; 
+        margin: 20px; 
+        border-radius: 10px;
+    }
+
+    .screenshot {
+        width: 70%; 
+        margin: 20px; 
+        border-radius: 10px;
+    }
+
+    .parallax {
+        /* The image used */
+        background-image: url("beetel.png");
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        width: 100%;
+        min-height: 500px;
+
+        padding-top: 16%;
+    }
+
+    img {
+        text-align: center;
+    }
+
+    .topBar {
+        font-family: monospace;
+        position: fixed;
+        background-color: #333;
+        width: 100%;
+        height: auto;
+        top: 0;
+        padding-left: 2%;
+        padding-top: 15px;
+        padding-bottom: 8px;
+    }
+    
+        /* width */
+        ::-webkit-scrollbar {
+      width: 10px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #333;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    @media only screen and (max-width: 1000px){
+        .innerContent{
+            width: 80%;
+        }
+
+        .screenshot {
+            width: 80%;
+        }
+    }
+    
+</style>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>update 1.0.3</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="yourmom logo.png">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C1VCD3SCT7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-C1VCD3SCT7');
+</script>
+    </head>
+    <body>
+
+
+        <div class="spacer" style="margin-bottom: 80px;"></div>
+        <center><img src='../images/yourmom hotfix.png' style="width: 70%;"></center>
+        <div class="content">
+            <center><h1 class='header' style="text-align: center;">UPDATE 1.0.3</h1></center>
+            <div class='innerContent'>
+                <hr class="one">
+                <br>
+                
+                <h6><span style="color: #666666;"><em>Saturday, September 25, 2021</em></span></h6>
+<h2>Dynmap Custom Markers</h2>
+<p>We recently added support for custom markers! As I&rsquo;m sure you&rsquo;ve read from our latest TWAC, we want to start incorporating flags into Coralark. This guide will walk you through how to add your own custom flag into the live map.</p>
+<ul>
+    <br>
+<h3>Preparing The Image</h3>
+<p>Start by designing your flag (A video on good flag design can be found in the latest TWAC). Then export your design as a 32x32 pixel PNG. Make your way to the #minecraft-general section of the discord and upload your image with the command &ldquo;.upload flag&rdquo;.</p>
+<p>Note: Please do not abuse this system. This service is <em>specifically</em> for uploading custom markers to the server. Abuse of this system will result in it&rsquo;s replacement with a manual submission system, which will take much longer.</p>
+<p>Once uploaded, Drew will give you the id for the image.</p>
+<br>
+<h3>Creating The Marker</h3>
+<p>Log into the Minecraft server and type the command:&nbsp;</p>
+<p>/dmarker addicon id:&lt;what you want to name the icon&gt; file:&lt;the code that Drew sent + .png&gt;</p>
+<p>Next, craft the sign and find the place you want to place your marker. If you want to hide it underground, that&rsquo;s okay. Remember that wherever the sign is placed, that&rsquo;s where the icon will be on the 3D map.</p>
+<p>The format for placing a marker is as follows:</p>
+<center><img src="../images/marker format.png"  class='screenshot'></center>
+</ul>
+<br>
+<p>And that&rsquo;s it! Check the live map to see if your flag shows up. If not, check the steps and make sure you didn&rsquo;t make any mistakes. If it still refuses to work, get in touch with a server admin.</p>
+
+
+                
+                
+            </div>
+        </div>
+        <script src="" async defer></script>
+    </body>
+</html>
