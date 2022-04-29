@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<style>
+    .banner{
+        display: none;
+    }
+
+    .content {
+        margin: 0 auto;
+        margin-bottom: auto;
+        position:absolute;
+        left:0;
+        right:0;
+        padding-bottom: 50%;
+    }
+
+    .innerContent {
+        text-align: center;
+        display: flex;
+        font-size: 25px;
+        font-family: monospace;
+
+        left: 50%;
+        transform: translate(-50%);
+        position: absolute;
+        padding-top: 10px;
+        max-width: 50%;
+        min-width: 300px;
+        padding-bottom: 25%;
+    }
+
+    .innerContent::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    body{
+        background-color: #333;
+        color: azure;
+    }
+
+    .breakpoint{
+        padding-top: 50%;
+    }
+
+    .button{
+        text-align: center;
+        width: 100%;
+    }
+
+    .donateButton{
+        width: 100px;
+        float: left;
+    }
+
+    .donateText{
+        float: left; 
+        text-align: left; 
+        padding-top: 1%; 
+        padding-left: 10px;
+        font-size: large;
+    }
+
+    .extras{
+        font-size: 25px;
+        font-family: monospace;
+
+        left: 50%;
+        transform: translate(-50%);
+        position: absolute;
+        padding-top: 10px;
+        max-width: 50%;
+        min-width: 300px;
+        padding-bottom: 25%;
+    }
+
+    .header {
+        font-family:monospace;
+        position: fixed;
+        background-color: #333;
+        width: 100%;
+        height: auto;
+        top: 0;
+        padding-left: 2%;
+        font-size: large;
+    }
+
+    .parallax {
+        /* The image used */
+        background-image: url("jordan.png");
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        width: 100%;
+        min-height: 100px;
+        padding-top: 35%;
+    }
+
+    .column {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+        flex: 33.33%;
+        font-size: large;
+    }
+
+        /* width */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #333;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    hr.one {
+        border: 3px solid rgb(204, 78, 78);
+    }
+
+    hr.two {
+        border: 3px solid rgb(78, 154, 204);
+    }
+
+    hr.three {
+        border: 3px solid rgb(204, 196, 78);
+    }
+
+    .spacer {
+        margin-bottom: 20px;
+    }
+
+    .gridDivide {
+        margin-bottom: 150px;
+    }
+
+    @media only screen and (min-width: 800px) {
+        .breakpoint{
+            padding-top: 30%;
+        }
+    }
+
+    @media only screen and (min-width: 1000px) {
+    .banner{
+        display: block;
+    }
+    .content {
+        margin: 0 auto;
+        margin-bottom: auto;
+        position:absolute;
+        left:0;
+        right:0;
+        padding-bottom: 50%;
+    }
+
+    .innerContent {
+        text-align: center;
+        display: flex;
+        font-size: 25px;
+        font-family: monospace;
+
+        left: 50%;
+        transform: translate(-50%);
+        position: absolute;
+        padding-top: 10px;
+        max-width: 50%;
+        min-width: 300px;
+        padding-bottom: 25%;
+    }
+
+    .innerContent::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    body{
+        background-color: #333;
+        color: azure;
+    }
+
+    .breakpoint{
+        padding-top: 30%;
+    }
+
+    .extras{
+        font-size: 25px;
+        font-family: monospace;
+
+        left: 50%;
+        transform: translate(-50%);
+        position: absolute;
+        padding-top: 10px;
+        max-width: 50%;
+        min-width: 300px;
+        padding-bottom: 25%;
+    }
+
+    .donateButton{
+        width: 200px;
+        float: left;
+    }   
+    .donateText{
+        float: left; 
+        text-align: left; 
+        padding-top: 1%; 
+        padding-left: 10px;
+        font-size: 30px;
+    }
+
+    .header {
+        font-family:monospace;
+        position: fixed;
+        background-color: #333;
+        width: 100%;
+        height: auto;
+        top: 0;
+        padding-left: 2%;
+    }
+
+    .parallax {
+        /* The image used */
+        background-image: url("jordan.png");
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        width: 100%;
+        min-height: 100px;
+        padding-top: 35%;
+    }
+
+    .column {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+        flex: 33.33%;
+        font-size: 30px;
+    }
+
+
+        /* width */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #333;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    hr.one {
+        border: 3px solid rgb(204, 78, 78);
+    }
+
+    hr.two {
+        border: 3px solid rgb(78, 154, 204);
+    }
+
+    hr.three {
+        border: 3px solid rgb(204, 196, 78);
+    }
+
+    .gridDivide {
+        margin-bottom: 450px;
+    }
+
+    }
+
+</style>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Coralark</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="yourmom logo.png">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C1VCD3SCT7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-C1VCD3SCT7');
+</script>
+    </head>
+    <body>
+
+        <div class="header">
+            <div><h2>Coralark</h2></div>
+        </div>
+        <div class="spacer"></div>
+        <center><img class='banner' src='images/jordan.png' style="width: 70%;"></center>
+        <div class="content">
+            <br>
+            <br>
+            <div class='banners' style="margin-left: 20%; padding-left: 3%; margin-right: 20%; background-color: azure;"><h1 class='otherheader' style='color:#333; font-size: 35px; font-family: monospace;'>Featured</h1></div>
+            <br>
+            <hr class='one' style="margin-right: 15%; margin-left: 15%;">
+            <br>
+
+            <div class='innerContent'>
+                <div class="column"><a href="map"><img class='button' src="images/map map.png"></a>Live Map</div>
+                <div class="column"><a href="news-hub"><img class='button' src="images/drew map.png"></a>News</div>
+                <div class="column"><a href="https://discord.gg/Qu8JcJZJ7M"><img class='button' src="images/discord_map.png"></a>Discord</div>
+            </div>
+            <div class='gridDivide'></div>
+            <div class='innerContent'>
+                <div class="column"><a href="https://forms.gle/6rSAekBDdZvxwmXh8"><img class='button' src="images/book map.png"></a>Apply</div>
+                <div class="column"><a href="mythos"><img class='button' src="images/mythos button.png"></a>Mythos</div>
+                <div class="column"></div>
+            </div>
+
+            <div class='breakpoint'></div>
+            <div style="margin-left: 20%; padding-left: 3%; margin-right: 20%; background-color: azure;"><h1 class='otherheader' style='color:#333; font-size: 35px; font-family: monospace;'>Extras</h1></div>
+            <br>
+            <hr class='two' style="margin-right: 15%; margin-left: 15%;">
+
+            <div class='extras'>
+                <div style="text-align: left;">
+                    <a href="https://paypal.me/wooshco/" >
+                        <img class='donateButton' src="images/donate button.png">
+                    </a>
+                    <div class='donateText'>
+                        <h3>Donate</h3>
+                        <h6>Help Support The Server</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+        </script>
+    </body>
+</html>
