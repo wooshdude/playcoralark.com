@@ -92,6 +92,45 @@
 }
 
 @media only screen and (max-width: 600px) {
+
+    .iconTitle {
+        position: absolute;
+        color: whitesmoke;
+        z-index: 2;
+        top: 120px;
+        width: 100%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
+    .scrollDown {
+        position: absolute;
+        color: whitesmoke;
+        z-index: 2;
+        transform: translateY(500px);
+        width: 100%;
+        text-align: center;
+        padding-left: 5%;
+        padding-right: 5%;
+    
+        font-size: 80px;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+        filter: opacity(0.6);
+    
+        animation: scrollDown 2s ease-in-out infinite alternate;
+        
+    }
+
+    @keyframes scrollDown {
+        from {
+            transform: translateY(580px);
+        }
+        to {
+            transform: translateY(600px)
+        }
+    }
+
     .news {
         width: 100%;
         background-color: #333;
