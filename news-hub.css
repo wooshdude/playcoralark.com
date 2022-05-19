@@ -1,0 +1,177 @@
+.topbar{
+    display: none;
+}
+
+.banner{
+    display: none;
+}
+
+
+.content {
+    margin: 0 auto;
+    margin-bottom: auto;
+    position:absolute;
+    left:0;
+    right:0;
+    padding-bottom: 50%;
+}
+
+.innerContent {
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-top: 10px;
+    font-size: medium;
+}
+
+body{
+    background-color: #333;
+    background-size: 100%;
+    color: azure;
+    font-size: 20px;
+    font-family: monospace;
+}
+
+.blocks{
+    padding-top: 50px;
+}
+
+.names{
+    padding-top: 0px;
+}
+
+.header {
+    font-family:monospace;
+    padding-top: 2%;
+}
+
+hr.one {
+    border: 3px solid rgb(204, 78, 78);
+}
+
+hr.two {
+    border: 3px solid rgb(78, 154, 204);
+}
+
+hr.three {
+    border: 3px solid rgb(204, 196, 78);
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("mall.png");
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    width: 100%;
+    min-height: 100px;
+    padding-top: 16%;
+}
+
+.topBar {
+    font-family: monospace;
+    position: fixed;
+    background-color: #333;
+    width: 100%;
+    height: auto;
+    top: 0;
+    padding-left: 2%;
+    padding-top: 12px;
+    padding-bottom: 8px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+.photo{
+    width: 100%;
+    float: none;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #333;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media only screen and (max-height: 500px) {
+    .innerContent {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+}
+
+@media only screen and (min-width: 600px) {
+    .banner{
+        display: none;
+    }   
+
+    .spacer{
+        margin-bottom: 40px;
+    }
+
+    .blocks{
+        padding-bottom: 25%;
+    }
+
+    .photo{
+        width: 40%;
+        float: left;
+    }
+
+    .names{
+        float: left;
+    }
+
+    .innerContent{
+        font-size: small;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .banner{
+        display: block;
+    }   
+
+    .blocks{
+        padding-bottom: 20%;
+    }
+
+    .photo{
+        width: 30%;
+        float: left;
+    }
+
+    .names{
+        float: left;
+    }
+
+    .innerContent{
+        font-size: large;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+}
+
+@media only screen and (min-width: 1500px){
+    .innerContent{
+        font-size: x-large;
+    }
+}

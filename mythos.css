@@ -1,0 +1,215 @@
+.content {
+    margin: 0 auto;
+    margin-bottom: auto;
+    position:absolute;
+    left:0;
+    right:0;
+    padding-bottom: 50%;
+}
+
+.innerContent {
+    text-align: center;
+    display: inline-block;
+    font-size: 25px;
+    font-family: monospace;
+
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    padding-top: 10px;
+    width: 85%;
+    padding-bottom: 25%;
+}
+/*
+.innerContent::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+*/
+
+body{
+    background-color: #333;
+    background-size: 100%;
+    color: azure;
+    font-size: 20px;
+    font-family: monospace;
+}
+
+.header {
+    font-family:monospace;
+    padding-top: 2%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+hr.one {
+    border: 3px solid rgb(204, 78, 78);
+}
+
+hr.two {
+    border: 3px solid rgb(78, 154, 204);
+}
+
+hr.three {
+    border: 3px solid rgb(204, 196, 78);
+}
+
+
+.parallax {
+    /* The image used */
+    background-image: url("beetel.png");
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 100%;
+    min-height: 500px;
+
+    padding-top: 16%;
+}
+
+.topBar {
+    font-family: monospace;
+    position: fixed;
+    background-color: #333;
+    width: 100%;
+    height: auto;
+    top: 0;
+    padding-left: 2%;
+    padding-top: 15px;
+    padding-bottom: 8px;
+}
+
+
+/* flip 2 test */
+.flip-card {
+    background-color: transparent;
+    width: 450px;
+    height: 610px;
+    perspective: 1000px;
+    margin: 2%;
+    min-width: 300px;
+    display: inline-block;
+    z-index: 99;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    z-index: 99;
+
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+    z-index: 99;
+
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+    background-color: #ffffff;
+    color: #111;
+    transform: rotateY(180deg);
+    line-height: 24px;
+    overflow: scroll;
+    overflow-x: hidden;
+    background-image: url('cards/marble-card.png');
+    background-size: auto;
+    
+}
+
+.lore {
+    text-align: left;
+    margin: 25px;
+    font-size: large;
+}
+
+.face {
+    border-radius: 10px;
+}
+
+.mobileSpacer {
+    display: none;
+}
+
+.desktopSpacer {
+    display: none;
+}
+
+
+    /* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #333;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media only screen and (max-width: 1000px){
+    .flip-card {
+        background-color: transparent;
+        width: 50%;
+        height: 400px;
+        max-width: 350px;
+        perspective: 1000px;
+        margin: auto;
+        padding-bottom: 10%;
+    }
+
+    .innerContent {
+        text-align: center;
+        display: block;
+        font-size: 25px;
+        font-family: monospace;
+
+        left: 50%;
+        transform: translate(-50%);
+        position: absolute;
+        padding-top: 10px;
+        width: 80%;
+        padding-bottom: 25%;
+    }
+
+    .banner {
+        display: none;
+    }
+
+    .spacer {
+        display: none;
+    }
+}
