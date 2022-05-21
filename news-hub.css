@@ -46,14 +46,30 @@ body{
 
 hr.one {
     border: 3px solid rgb(204, 78, 78);
+    opacity: 100%;
 }
 
 hr.two {
     border: 3px solid rgb(78, 154, 204);
+    opacity: 100%;
 }
 
 hr.three {
     border: 3px solid rgb(204, 196, 78);
+    opacity: 100%;
+}
+
+.navbar {
+    z-index: 100;
+}
+
+.dropdown-menu {
+    background-color: #171a1c;
+    color: #2d3134;
+}
+
+.dropdown-item {
+    color: rgb(150, 150, 150);
 }
 
 .parallax {
